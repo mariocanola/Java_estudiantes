@@ -96,12 +96,12 @@ public class Estudiante {
 	public Estudiante() {
 		nombre = "Mario";
 		apellido = "Cañola";
-		codigo = 201612345;
+		codigo = 1122922910;
 		curso1 = new Curso("ISIS1204", "APO1", 3, Departamento.SISTEMAS);
 		curso2 = new Curso("MATE1203", "Cálculo diferencial", 3, Departamento.MATEMATICAS);
 		curso3 = new Curso("FISI1100", "Física 1", 4, Departamento.FISICA);
 		curso4 = new Curso("BIOL1405", "Biología celular", 4, Departamento.BIOLOGIA);
-		semestre = 4;
+		semestre = (int)(Math.random() * 10);
 	}
 
 	// -----------------------------------------------------------------
@@ -217,7 +217,7 @@ public class Estudiante {
         } else if (semestre >= 8) {
             return 50000;
         } else {
-            return 0; // Por si acaso alguien mete un semestre inválido
+            return 0; 
         }
     }
 
