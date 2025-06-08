@@ -96,12 +96,12 @@ public class Estudiante {
 	public Estudiante() {
 		nombre = "Mario";
 		apellido = "Cañola";
-		codigo = 201612345;
+		codigo = 1122922910;
 		curso1 = new Curso("ISIS1204", "APO1", 3, Departamento.SISTEMAS);
 		curso2 = new Curso("MATE1203", "Cálculo diferencial", 3, Departamento.MATEMATICAS);
 		curso3 = new Curso("FISI1100", "Física 1", 4, Departamento.FISICA);
 		curso4 = new Curso("BIOL1405", "Biología celular", 4, Departamento.BIOLOGIA);
-		semestre = 1;
+		semestre = (int)(Math.random() * 10);
 	}
 
 	// -----------------------------------------------------------------
@@ -205,6 +205,21 @@ public class Estudiante {
 
 		return promedio;
 	}
+	
+	//Este método calculará el salario que ganaría un estudiante si fuera monitor en función de su nota media y semestre.
+	public int calcularSalario() {
+        double promedio = calcularPromedioEstudiante();
+
+        if (semestre >= 1 && semestre <= 3) {
+            return promedio >= 4.0 ? 25000 : 15000;
+        } else if (semestre >= 4 && semestre <= 7) {
+            return promedio >= 4.5 ? 35000 : 25000;
+        } else if (semestre >= 8) {
+            return 50000;
+        } else {
+            return 0; 
+        }
+    }
 
 	/**
 	 * Indica si el estudiante se encuentra en prueba académica.
@@ -339,11 +354,11 @@ public class Estudiante {
 		return "Respuesta 2";
 	}
 
-	public String getSemestre() {
+	public int getSemestre() {
 		return semestre;
 	}
 
-	public void setSemestre(String semestre) {
+	public void setSemestre(int semestre) {
 		this.semestre = semestre;
 	}
 }
