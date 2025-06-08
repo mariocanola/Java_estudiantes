@@ -70,7 +70,7 @@ public class Estudiante {
 	private Curso curso4;
 	
 	//atributo de semestre, indicará en qué semestre se encuentra actualmente el estudiante.
-	private int semestre; 
+	private int semestre;
 	// -----------------------------------------------------------------
 	// Constructores
 	// -----------------------------------------------------------------
@@ -351,7 +351,7 @@ public class Estudiante {
 	 * @return Respuesta 2.
 	 */
 	public String metodo2() {
-		return "Respuesta 2";
+		return "La mejor nota del estudiante " + darNombre() + " es: " + MejorNota();
 	}
 
 	public int getSemestre() {
@@ -360,5 +360,18 @@ public class Estudiante {
 
 	public void setSemestre(int semestre) {
 		this.semestre = semestre;
+	}
+	
+	public double MejorNota() {
+	    double[] notas = {curso1.darNota(), curso2.darNota(), curso3.darNota(), curso4.darNota()};
+	    
+	    double mejorNota = notas[0];
+	    
+	    for (int i = 1; i < notas.length; i++) {
+	        if (notas[i] > mejorNota) {
+	            mejorNota = notas[i];
+	        }
+	    }
+	    return mejorNota;
 	}
 }

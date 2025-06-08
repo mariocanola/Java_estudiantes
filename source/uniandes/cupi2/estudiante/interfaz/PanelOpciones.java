@@ -41,12 +41,12 @@ public class PanelOpciones extends JPanel implements ActionListener {
 	/**
 	 * Representa el comando para la opción 1.
 	 */
-	private static final String OPCION1 = "OPCION_1";
+	private static final String OPCION1 = "opción_1";
 
 	/**
 	 * Representa el comando para la opción 2.
 	 */
-	private static final String OPCION2 = "OPCION_2";
+	private static final String OPCION2 = "opción_2";
 
 	// -----------------------------------------------------------------
 	// Atributos de Interfaz
@@ -104,12 +104,12 @@ public class PanelOpciones extends JPanel implements ActionListener {
 		btnPrueba.addActionListener(this);
 		add(btnPrueba);
 
-		btnOpcion1 = new JButton("Opción 1");
+		btnOpcion1 = new JButton("Método 1");
 		btnOpcion1.setActionCommand(OPCION1);
 		btnOpcion1.addActionListener(this);
 		add(btnOpcion1);
 
-		btnOpcion2 = new JButton("Opción 2");
+		btnOpcion2 = new JButton("Método 2");
 		btnOpcion2.setActionCommand(OPCION2);
 		btnOpcion2.addActionListener(this);
 		add(btnOpcion2);
