@@ -68,7 +68,9 @@ public class Estudiante {
 	 * Curso 4 del estudiante.
 	 */
 	private Curso curso4;
-
+	
+	//atributo de semestre, indicará en qué semestre se encuentra actualmente el estudiante.
+	private int semestre; 
 	// -----------------------------------------------------------------
 	// Constructores
 	// -----------------------------------------------------------------
@@ -88,14 +90,18 @@ public class Estudiante {
 	 * Curso 4 - Código: BIOL1405, Nombre: Biología celular, Créditos: 4,
 	 * Departamento: BIOLOGIA.
 	 */
+	/**
+	 * 
+	 */
 	public Estudiante() {
-		nombre = "Juliana";
-		apellido = "Ramírez";
+		nombre = "Mario";
+		apellido = "Cañola";
 		codigo = 201612345;
 		curso1 = new Curso("ISIS1204", "APO1", 3, Departamento.SISTEMAS);
 		curso2 = new Curso("MATE1203", "Cálculo diferencial", 3, Departamento.MATEMATICAS);
 		curso3 = new Curso("FISI1100", "Física 1", 4, Departamento.FISICA);
 		curso4 = new Curso("BIOL1405", "Biología celular", 4, Departamento.BIOLOGIA);
+		semestre = 1;
 	}
 
 	// -----------------------------------------------------------------
@@ -331,5 +337,13 @@ public class Estudiante {
 	 */
 	public String metodo2() {
 		return "Respuesta 2";
+	}
+
+	public String getSemestre() {
+		return semestre;
+	}
+
+	public void setSemestre(String semestre) {
+		this.semestre = semestre;
 	}
 }
