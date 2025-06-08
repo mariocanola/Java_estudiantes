@@ -68,7 +68,9 @@ public class Estudiante {
 	 * Curso 4 del estudiante.
 	 */
 	private Curso curso4;
-
+	
+	//atributo de semestre, indicará en qué semestre se encuentra actualmente el estudiante.
+	private String semestre; 
 	// -----------------------------------------------------------------
 	// Constructores
 	// -----------------------------------------------------------------
@@ -331,5 +333,13 @@ public class Estudiante {
 	 */
 	public String metodo2() {
 		return "Respuesta 2";
+	}
+
+	public String getSemestre() {
+		return semestre;
+	}
+
+	public void setSemestre(String semestre) {
+		this.semestre = semestre;
 	}
 }
