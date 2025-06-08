@@ -342,7 +342,7 @@ public class Estudiante {
 	 * @return Respuesta 1.
 	 */
 	public String metodo1() {
-		return "Respuesta 1";
+		return "El salario que ganaria el estudiante " + darNombre() + " como monitor en el semestre "+ semestre + " es de " + calcularSalario();
 	}
 
 	/**
