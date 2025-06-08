@@ -101,7 +101,7 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener {
 	 * Campo de texto de los créditos.
 	 */
 	private JTextField txtCreditos;
-
+	
 	/**
 	 * Botón para aceptar.
 	 */
@@ -162,9 +162,11 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener {
 
 		txtNombre = new JTextField();
 		panelInfo.add(txtNombre);
-
+		
 		lblDepartamento = new JLabel("Departamento:");
 		panelInfo.add(lblDepartamento);
+		
+		
 
 		cbDepartamentos = new JComboBox();
 		cbDepartamentos.addItem("Ing. Sistemas");
@@ -178,6 +180,7 @@ public class DialogoCambiarCurso extends JDialog implements ActionListener {
 
 		txtCreditos = new JTextField();
 		panelInfo.add(txtCreditos);
+		
 
 		btnAceptar = new JButton("Aceptar");
 		btnAceptar.setActionCommand(ACEPTAR);
